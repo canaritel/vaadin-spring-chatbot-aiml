@@ -74,6 +74,7 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
         tabs.addThemeVariants(TabsVariant.LUMO_MINIMAL);
         tabs.setId("tabs");
 
+        // CREAR UN LISTADO DE TAB A TRAVÉS DE FOR /////////////
         finalList = bots.size();
         for (int i = 0; i < finalList; i++) {
             tabs.add(createTab(bots.get(i).name));
@@ -94,7 +95,7 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
         return bots.stream()
                 .map(Bot::toString)
                 .sorted()
-                //.map(name -> createTab(name)) // CREAR UN LISTADO DE TAB A TRAVÉS DE FOR /////////////
+                //.map(name -> createTab(name)) 
                 .map(name -> createTab(bots.get(0).name))
                 .collect(Collectors.toList()).toArray(new Tab[bots.size()]);
 

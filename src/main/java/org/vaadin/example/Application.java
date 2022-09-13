@@ -26,7 +26,7 @@ import org.springframework.context.event.EventListener;
  *
  */
 @CssImport("./styles/shared-styles.css")
-@Theme(variant = Lumo.DARK)
+@Theme(variant = Lumo.LIGHT)
 //@Push
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
